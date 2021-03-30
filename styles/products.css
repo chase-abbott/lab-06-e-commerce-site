@@ -5,16 +5,18 @@ h1 {
 }
 
 img {
-    max-width: 100px;
-    max-height: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 li {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background-color: aqua;
     flex-direction: column;
+    margin: 15px;
+    border-radius: 5px;
+    
 }
 
 ul {

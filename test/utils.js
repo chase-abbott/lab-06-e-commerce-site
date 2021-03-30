@@ -1,13 +1,10 @@
 export function createPet(pet) {
-    const list = document.getElementById('ul');
+
     const li = document.createElement('li');
-    li.classList.add(pet.id);
+
+    // li.classList.add(pet);
+    li.textContent = pet.species
     li.style.background = 'green';
-
-    // <p id="dog"> Dog </p>
-    const pType = document.createElement('p');
-
-    pType.textContent = pet.id;
 
     // <p> Spot </p>
     const pName = document.createElement('p');
@@ -33,17 +30,19 @@ export function createPet(pet) {
     // <p> $100 </p>
     const pPrice = document.createElement('p');
 
-    pPrice.textContent = pet.price;
+    pPrice.textContent = pet.price.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
 
     // <button>Add to Cart</button>
     const button = document.createElement('button')
 
     button.textContent = 'Add to Cart!';
 
-    li.append(pName, image, pFluffy, pCategory, pPrice, button)
-    list.append(li);
+    li.append(pName, image, pFluffy, pCategory, pPrice, button);
 
-    // return 'li';
+    return li;
 }
 
 

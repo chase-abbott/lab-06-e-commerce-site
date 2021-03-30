@@ -1,18 +1,21 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
+import { createPet } from './utils.js';
+
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
+test('It should take in a pet object and return an li element', (expect) => {
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    const expected = `<li style="background: green;">Dog<p class="name">Spot</p><img src="/assets/dog.png"><p>Fluffy</p><p>Mammal</p><p>$100.00</p><button>Add to Cart!</button></li>`;
+    const actual = createPet({
+        species: 'Dog',
+        name: 'Spot',
+        image: '/assets/dog.png',
+        isFluffy: true,
+        category: 'Mammal',
+        price: 100
+    });
+
+    expect.equal(actual.outerHTML, expected);
 });

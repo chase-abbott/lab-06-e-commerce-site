@@ -16,3 +16,9 @@ li {
     background-color: aqua;
     flex-direction: column;
 }
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

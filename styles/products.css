@@ -1,0 +1,18 @@
+h1 {
+    margin: 25px;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    flex-direction: column;
+}

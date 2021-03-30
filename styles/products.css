@@ -5,7 +5,7 @@ h1 {
 }
 
 img {
-    width: 100px;
+    width: 150px;
     height: 100px;
 }
 
@@ -16,7 +16,7 @@ li {
     flex-direction: column;
     margin: 15px;
     border-radius: 5px;
-    
+    width: 150px;
 }
 
 ul {

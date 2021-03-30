@@ -27,7 +27,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    margin-top: 10rem;
+    margin-bottom: 1rem;
 }
 
 section {

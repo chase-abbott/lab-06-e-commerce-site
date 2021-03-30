@@ -3,7 +3,7 @@ export function createPet(pet) {
     const li = document.createElement('li');
 
     // li.classList.add(pet);
-    li.textContent = pet.species
+    li.textContent = pet.species;
     li.style.background = 'green';
 
     // <p> Spot </p>
@@ -36,7 +36,7 @@ export function createPet(pet) {
     });
 
     // <button>Add to Cart</button>
-    const button = document.createElement('button')
+    const button = document.createElement('button');
 
     button.textContent = 'Add to Cart!';
 

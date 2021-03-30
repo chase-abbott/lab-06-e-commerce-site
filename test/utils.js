@@ -3,8 +3,12 @@ export function createPet(pet) {
     const li = document.createElement('li');
 
     // li.classList.add(pet);
-    li.textContent = pet.species;
+    li.classList.add(pet.species);
     li.style.background = 'green';
+
+    const pType = document.createElement('p');
+
+    pType.textContent = pet.species;
 
     // <p> Spot </p>
     const pName = document.createElement('p');
@@ -40,7 +44,7 @@ export function createPet(pet) {
 
     button.textContent = 'Add to Cart!';
 
-    li.append(pName, image, pFluffy, pCategory, pPrice, button);
+    li.append(pType, pName, image, pFluffy, pCategory, pPrice, button);
 
     return li;
 }

@@ -1,18 +1,18 @@
 export const cart = [
     {
-        id = 'dog',
-        quantity = 3
+        id: 'Dog',
+        quantity: 3
     },
     {
-        id = 'lizard',
-        quantity = 1
+        id: 'Lizard',
+        quantity: 1
     },
     {
-        id = 'frog',
-        quantity = 6
+        id: 'Frog',
+        quantity: 6
     },
     {
-        id = 'cat',
-        quantity = 2
+        id: 'Cat',
+        quantity: 2
     }
 ]

@@ -64,5 +64,24 @@ export function calcItemTotal(itemQuantity, itemPrice) {
     return total;
 };
 
+export function renderLineItems(cartItem, pet) {
+    const tr = document.createElement('tr');
+    const tdName = document.createElement('td');
+    const tdQuantity = document.createElement('td');
+    const tdPrice = document.createElement('td');
+
+    tdName.textContent = pet.id;
+    tdQuantity.textContent = cartItem.quantity;
+    const total = pet.price * cartItem.quantity;
+
+    tdPrice.textContent = total.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
+
+    tr.append(tdName, tdPrice, tdQuantity);
+
+    return tr;
+}
 
 

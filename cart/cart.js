@@ -11,9 +11,9 @@ for (let cartItem of cart) {
 
     const tr = renderLineItems(cartItem, matchingPet);
 
-    console.log(tr);
-
     table.append(tr);
 
 };
+
+
 

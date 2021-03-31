@@ -72,7 +72,7 @@ export function renderLineItems(cartItem, pet) {
 
     tdName.textContent = pet.id;
     tdQuantity.textContent = cartItem.quantity;
-    const total = pet.price * cartItem.quantity;
+    const total = calcItemTotal(pet.price, cartItem.quantity);
 
     tdPrice.textContent = total.toLocaleString('en-US', {
         style: 'currency',
@@ -82,6 +82,19 @@ export function renderLineItems(cartItem, pet) {
     tr.append(tdName, tdQuantity, tdPrice);
 
     return tr;
+}
+
+export function calcOrderTotal(cartArray, petArray) {
+    let total = 0;
+
+    for (let cart of cartArray) {
+        const pet = findById(petArray, cart.id)
+        const itemTotal = calcItemTotal(cart.quantity, pet.price)
+        // total = calcItemTotal()
+        total = itemTotal + total;
+    }
+
+    return total;
 }
 
 

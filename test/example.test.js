@@ -1,12 +1,10 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { createPet, findById, calcItemTotal, renderLineItems } from './utils.js';
+import { createPet, findById, calcItemTotal, renderLineItems, calcOrderTotal } from './utils.js';
 import { array } from '../products.js';
 import { cart } from '../cart/cart-data.js'
 
-const dog = cart[0];
-const dog1 = array[0];
-console.log(renderLineItems(dog, dog1))
+
 
 
 
@@ -47,8 +45,16 @@ test('It should take in a quantity and a  and return the total', (expect) => {
 test('It should take in a cart item and pet and return a line item element', (expect) => {
     const dog = array[0];
     const cartItem = cart[0];
-    const expected = `<tr><td>Dog</td><td>$300.00</td><td>3</td></tr>`
+    const expected = `<tr><td>Dog</td><td>3</td><td>$300.00</td></tr>`
     const actual = renderLineItems(cartItem, dog);
 
     expect.equal(actual.outerHTML, expected);
+});
+
+test('It should take in a cart item and pet and return a line item element', (expect) => {
+
+    const expected = 825;
+    const actual = calcOrderTotal(cart, array);
+
+    expect.equal(actual, expected);
 });

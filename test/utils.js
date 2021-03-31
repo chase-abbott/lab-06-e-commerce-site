@@ -97,4 +97,18 @@ export function calcOrderTotal(cartArray, petArray) {
     return total;
 }
 
+export function renderTotalRow(cartArray, petArray) {
+    const tr = document.createElement('tr');
+    const td1 = document.createElement('td');
+    const td2 = document.createElement('td');
+    const td3 = document.createElement('td');
+
+    td3.textContent = `$${calcOrderTotal(cartArray, petArray)}.00`;
+
+    tr.append(td1, td2, td3);
+
+    return tr;
+}
+
+
 

@@ -1,9 +1,19 @@
-// import { cart } from './cart-data.js';
-// import { }
+import { cart } from './cart-data.js';
+import { array } from '../products.js';
+import { findById, renderLineItems } from '../test/utils.js';
 
-// const table = document.querySelector('table');
+const table = document.querySelector('table');
 
 
 
-// for (let)
+for (let cartItem of cart) {
+    const matchingPet = findById(array, cartItem.id);
+
+    const tr = renderLineItems(cartItem, matchingPet);
+
+    console.log(tr);
+
+    table.append(tr);
+
+};
 

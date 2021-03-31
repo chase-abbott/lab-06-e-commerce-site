@@ -79,7 +79,7 @@ export function renderLineItems(cartItem, pet) {
         currency: 'USD',
     });
 
-    tr.append(tdName, tdPrice, tdQuantity);
+    tr.append(tdName, tdQuantity, tdPrice);
 
     return tr;
 }

@@ -15,4 +15,4 @@ export const cart = [
         id: 'Cat',
         quantity: 2
     }
-]
+];

@@ -62,7 +62,7 @@ export function calcItemTotal(itemQuantity, itemPrice) {
     let total = 0;
     total = itemPrice * itemQuantity;
     return total;
-};
+}
 
 export function renderLineItems(cartItem, pet) {
     const tr = document.createElement('tr');
@@ -88,8 +88,8 @@ export function calcOrderTotal(cartArray, petArray) {
     let total = 0;
 
     for (let cart of cartArray) {
-        const pet = findById(petArray, cart.id)
-        const itemTotal = calcItemTotal(cart.quantity, pet.price)
+        const pet = findById(petArray, cart.id);
+        const itemTotal = calcItemTotal(cart.quantity, pet.price);
         // total = calcItemTotal()
         total = itemTotal + total;
     }

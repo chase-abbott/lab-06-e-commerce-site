@@ -12,9 +12,10 @@ for (let cartItem of cart) {
     const tr = renderLineItems(cartItem, matchingPet);
 
     table.append(tr);
-};
+}
 
 const tr2 = renderTotalRow(cart, array);
 
 table.append(tr2);
+
 

@@ -49,4 +49,13 @@ export function createPet(pet) {
     return li;
 }
 
+export function findById(array, id) {
+    for (let arrays of array) {
+        if (arrays.id === id) {
+            return arrays;
+        }
+    }
+}
+
+
 

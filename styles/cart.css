@@ -1,0 +1,12 @@
+table {
+    border: solid 1px black;
+    width: 50%;
+}
+
+tr {
+    border: dotted 1px black;
+}
+
+td {
+    border: dotted 1px black;
+}

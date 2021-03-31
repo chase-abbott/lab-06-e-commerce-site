@@ -3,12 +3,12 @@ export function createPet(pet) {
     const li = document.createElement('li');
 
     // li.classList.add(pet);
-    li.classList.add(pet.species);
+    li.classList.add(pet.id);
     li.style.background = 'green';
 
     const pType = document.createElement('p');
 
-    pType.textContent = pet.species;
+    pType.textContent = pet.id;
 
     // <p> Spot </p>
     const pName = document.createElement('p');

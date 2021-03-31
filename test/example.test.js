@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { createPet, findById } from './utils.js';
+import { createPet, findById, calcItemTotal } from './utils.js';
 import { array } from '../products.js';
 
 
@@ -27,6 +27,13 @@ test('It should take in an array and an id and find the matching object in the a
 
     const expected = dog;
     const actual = findById(array, 'Dog');
+
+    expect.equal(actual, expected);
+});
+
+test('It should take in a quantity and a  and return the total', (expect) => {
+    const expected = 2;
+    const actual = calcItemTotal(1, 2);
 
     expect.equal(actual, expected);
 });

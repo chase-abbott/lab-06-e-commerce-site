@@ -1,3 +1,4 @@
+
 export function createPet(pet) {
 
     const li = document.createElement('li');
@@ -50,12 +51,18 @@ export function createPet(pet) {
 }
 
 export function findById(array, id) {
-    for (let arrays of array) {
-        if (arrays.id === id) {
-            return arrays;
+    for (let item of array) {
+        if (item.id === id) {
+            return item;
         }
     }
 }
+
+export function calcItemTotal(itemQuantity, itemPrice) {
+    let total = 0;
+    total = itemPrice * itemQuantity;
+    return total;
+};
 
 
 

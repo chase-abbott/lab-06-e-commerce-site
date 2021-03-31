@@ -45,3 +45,7 @@ p:first-child {
     font-family: 'Roboto', sans-serif;
     font-size: 1.25rem;
 }
+
+header > a {
+    margin: 5px;
+}

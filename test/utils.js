@@ -44,10 +44,8 @@ export function createPet(pet) {
     // <button>Add to Cart</button>
     const button = document.createElement('button');
 
-    button.value = pet.id;
-
     button.addEventListener('click', () => {
-        addItemToCart(button.value);
+        addItemToCart(pet.id);
     })
 
     button.textContent = 'Add to Cart!';

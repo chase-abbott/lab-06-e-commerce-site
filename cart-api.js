@@ -13,7 +13,12 @@ export function getCart() {
 
     const parsedCart = JSON.parse(cartString);
 
-    return parsedCart;
+    if (parsedCart) {
+        return parsedCart;
+    } else {
+        return [];
+    }
+
 }
 
 
@@ -23,7 +28,7 @@ export function addItemToCart(productId) {
     const matchingPet = findById(cart, productId);
 
     if (matchingPet) {
-        cart.quantity++;
+        matchingPet.quantity++;
     } else {
         const item = {
             id: productId,

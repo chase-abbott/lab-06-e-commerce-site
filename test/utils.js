@@ -1,3 +1,4 @@
+import { addItemToCart } from '../cart-api.js';
 
 export function createPet(pet) {
 
@@ -42,6 +43,13 @@ export function createPet(pet) {
 
     // <button>Add to Cart</button>
     const button = document.createElement('button');
+
+    button.value = pet.id;
+
+    button.addEventListener('click', () => {
+        console.log(typeof pet.id)
+        addItemToCart(button.value);
+    })
 
     button.textContent = 'Add to Cart!';
 

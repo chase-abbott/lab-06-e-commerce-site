@@ -1,14 +1,15 @@
+
 export function createPet(pet) {
 
     const li = document.createElement('li');
 
     // li.classList.add(pet);
-    li.classList.add(pet.species);
+    li.classList.add(pet.id);
     li.style.background = 'green';
 
     const pType = document.createElement('p');
 
-    pType.textContent = pet.species;
+    pType.textContent = pet.id;
 
     // <p> Spot </p>
     const pName = document.createElement('p');
@@ -49,4 +50,79 @@ export function createPet(pet) {
     return li;
 }
 
+export function findById(array, id) {
+    for (let item of array) {
+        if (item.id === id) {
+            return item;
+        }
+    }
+}
+
+export function calcItemTotal(itemQuantity, itemPrice) {
+    let total = 0;
+    total = itemPrice * itemQuantity;
+    return total;
+}
+
+export function renderLineItems(cartItem, pet) {
+    const tr = document.createElement('tr');
+    const tdName = document.createElement('td');
+    const tdQuantity = document.createElement('td');
+    const tdPrice = document.createElement('td');
+
+    tdName.textContent = pet.id;
+    tdQuantity.textContent = cartItem.quantity;
+    const total = calcItemTotal(pet.price, cartItem.quantity);
+
+    tdPrice.textContent = total.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
+
+    tr.append(tdName, tdQuantity, tdPrice);
+
+    return tr;
+}
+
+export function calcOrderTotal(cartArray, petArray) {
+    let total = 0;
+
+    for (let cart of cartArray) {
+        const pet = findById(petArray, cart.id);
+        const itemTotal = calcItemTotal(cart.quantity, pet.price);
+        // total = calcItemTotal()
+        total = itemTotal + total;
+    }
+
+    return total;
+}
+
+export function renderTotalRow(cartArray, petArray) {
+    const tr = document.createElement('tr');
+    const td1 = document.createElement('td');
+    const td2 = document.createElement('td');
+    const td3 = document.createElement('td');
+
+    td1.textContent = 'Total';
+
+    td3.textContent = `$${calcOrderTotal(cartArray, petArray)}.00`;
+
+    tr.append(td1, td2, td3);
+
+    return tr;
+}
+
+export function createHead() {
+    const thead = document.createElement('thead');
+    const th1 = document.createElement('th');
+    const th2 = document.createElement('th');
+    const th3 = document.createElement('th');
+
+    th1.textContent = 'Type of Animal';
+    th2.textContent = 'Quantity';
+    th3.textContent = 'Price';
+
+    thead.append(th1, th2, th3);
+    return thead;
+}
 

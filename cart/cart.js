@@ -1,10 +1,11 @@
 import { cart } from './cart-data.js';
 import { array } from '../products.js';
-import { findById, renderLineItems, renderTotalRow } from '../test/utils.js';
+import { findById, renderLineItems, renderTotalRow, createHead } from '../test/utils.js';
 
 const table = document.querySelector('table');
 
-
+const head = createHead();
+table.append(head);
 
 for (let cartItem of cart) {
     const matchingPet = findById(array, cartItem.id);

@@ -103,6 +103,8 @@ export function renderTotalRow(cartArray, petArray) {
     const td2 = document.createElement('td');
     const td3 = document.createElement('td');
 
+    td1.textContent = 'Total'
+
     td3.textContent = `$${calcOrderTotal(cartArray, petArray)}.00`;
 
     tr.append(td1, td2, td3);
@@ -110,5 +112,17 @@ export function renderTotalRow(cartArray, petArray) {
     return tr;
 }
 
+export function createHead() {
+    const thead = document.createElement('thead');
+    const th1 = document.createElement('th');
+    const th2 = document.createElement('th');
+    const th3 = document.createElement('th');
 
+    th1.textContent = 'Type of Animal';
+    th2.textContent = 'Quantity';
+    th3.textContent = 'Price';
+
+    thead.append(th1, th2, th3);
+    return thead;
+}
 

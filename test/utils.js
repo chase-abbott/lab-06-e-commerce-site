@@ -47,7 +47,6 @@ export function createPet(pet) {
     button.value = pet.id;
 
     button.addEventListener('click', () => {
-        console.log(typeof pet.id)
         addItemToCart(button.value);
     })
 
@@ -135,4 +134,3 @@ export function createHead() {
     thead.append(th1, th2, th3);
     return thead;
 }
-

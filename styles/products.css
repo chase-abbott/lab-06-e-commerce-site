@@ -9,7 +9,7 @@ main {
 
 h1 {
     margin: 25px;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
 }
@@ -44,4 +44,8 @@ p {
 p:first-child {
     font-family: 'Roboto', sans-serif;
     font-size: 1.25rem;
+}
+
+header > a {
+    margin: 5px;
 }

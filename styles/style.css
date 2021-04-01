@@ -27,7 +27,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 15rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -52,6 +52,11 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    
+}
+
+header > a {
+    margin: 5px;
 }
 
 footer {

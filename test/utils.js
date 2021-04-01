@@ -60,7 +60,9 @@ export function findById(array, id) {
 
 export function calcItemTotal(itemQuantity, itemPrice) {
     let total = 0;
+
     total = itemPrice * itemQuantity;
+
     return total;
 }
 

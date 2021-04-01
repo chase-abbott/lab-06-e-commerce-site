@@ -41,16 +41,22 @@ export function createPet(pet) {
         currency: 'USD',
     });
 
+    const pQuantity = document.createElement('p');
+
+    pQuantity.textContent = `Quantity: ${pet.quantity}`
+
     // <button>Add to Cart</button>
     const button = document.createElement('button');
 
     button.addEventListener('click', () => {
         addItemToCart(pet.id);
+        pet.quantity++;
+        pQuantity.textContent = `Quantity: ${pet.quantity}`;
     })
 
     button.textContent = 'Add to Cart!';
 
-    li.append(pType, pName, image, pFluffy, pCategory, pPrice, button);
+    li.append(pType, pName, image, pFluffy, pCategory, pPrice, pQuantity, button);
 
     return li;
 }

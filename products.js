@@ -5,6 +5,7 @@ const dog = {
     isFluffy: true,
     category: 'Mammal',
     price: 100,
+    quantity: 0,
 };
 
 const lizard = {
@@ -14,6 +15,7 @@ const lizard = {
     isFluffy: false,
     category: 'Reptile',
     price: 45,
+    quantity: 0,
 };
 
 const cat = {
@@ -23,6 +25,7 @@ const cat = {
     isFluffy: true,
     category: 'Mammal',
     price: 90,
+    quantity: 0,
 };
 
 const rabbit = {
@@ -32,6 +35,7 @@ const rabbit = {
     isFluffy: true,
     category: 'Mammal',
     price: 75,
+    quantity: 0,
 };
 
 const turtle = {
@@ -41,6 +45,7 @@ const turtle = {
     isFluffy: false,
     category: 'Reptile',
     price: 60,
+    quantity: 0,
 };
 
 const frog = {
@@ -50,6 +55,7 @@ const frog = {
     isFluffy: false,
     category: 'Amphibian',
     price: 50,
+    quantity: 0,
 };
 
 export let array = [dog, lizard, cat, rabbit, turtle, frog];

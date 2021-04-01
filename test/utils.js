@@ -103,7 +103,7 @@ export function renderTotalRow(cartArray, petArray) {
     const td2 = document.createElement('td');
     const td3 = document.createElement('td');
 
-    td1.textContent = 'Total'
+    td1.textContent = 'Total';
 
     td3.textContent = `$${calcOrderTotal(cartArray, petArray)}.00`;
 

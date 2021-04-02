@@ -1,18 +1,45 @@
 body{
     background-image: url(../assets/dog.png);
-    margin-top: 100px;
     background-repeat: no-repeat;
     background-position: center;
 }
-header{
-    height: 50px;
+main{
+    margin-top: 150px;
+}
+a:link, a:visited {
+    background-color:cadetblue;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+  }
+
+a:hover {
+    background-color: rgb(68, 117, 119);
+}
+  
+
+header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     box-shadow: none;
+    
 }
 
 button {
     margin: 10px;
     width: 10rem;
     height: 3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+button:active {
+    transform: translateY(.2rem);
 }
 
 h1 {
@@ -22,7 +49,7 @@ h1 {
 
 table {
     border: solid 1px black;
-    width: 50%;
+    width: 100%;
     margin: 25px;
     max-width: 50%;
 }
@@ -49,6 +76,8 @@ td:last-child {
     justify-content: center;
 }
 
- tr {
+ tr{
     background-color: #F6CA83;
+    font-size: 1.3rem;
+    font-weight: 500;
 }

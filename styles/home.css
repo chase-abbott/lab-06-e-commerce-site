@@ -3,6 +3,10 @@ body {
     background-color: lightsalmon;
 }
 
+main {
+    margin: 50px;
+}
+
 h1 {
     font-size: 30px;
     font-weight: 700;
@@ -11,4 +15,26 @@ h1 {
 header > a {
     margin: 5px;
     font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+a:link, a:visited {
+    background-color:cadetblue;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+a:hover {
+    background-color: rgb(68, 117, 119);
+}
+  
+
+header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: none;
 }

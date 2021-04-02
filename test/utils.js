@@ -43,7 +43,7 @@ export function createPet(pet) {
 
     const pQuantity = document.createElement('p');
 
-    pQuantity.textContent = `Quantity: ${pet.quantity}`
+    pQuantity.textContent = `Quantity: ${pet.quantity}`;
 
     // <button>Add to Cart</button>
     const button = document.createElement('button');

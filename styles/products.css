@@ -14,6 +14,28 @@ h1 {
     font-family: 'Roboto', sans-serif;
 }
 
+a:link, a:visited {
+    background-color:cadetblue;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+  }
+
+a:hover {
+    background-color: rgb(68, 117, 119);
+}
+  
+
+header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: none;
+}
+
 img {
     width: 150px;
     height: 100px;
@@ -33,7 +55,7 @@ li {
 
 ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
     flex-direction: row;
 }
 
@@ -48,4 +70,8 @@ p:first-child {
 
 header > a {
     margin: 5px;
+}
+
+button {
+    cursor: pointer;
 }

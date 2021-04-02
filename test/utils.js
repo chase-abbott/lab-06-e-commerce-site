@@ -1,4 +1,4 @@
-import { addItemToCart } from '../cart-api.js';
+import { addItemToCart, removeItem } from '../cart-api.js';
 
 export function createPet(pet) {
 
@@ -36,10 +36,7 @@ export function createPet(pet) {
     // <p> $100 </p>
     const pPrice = document.createElement('p');
 
-    pPrice.textContent = pet.price.toLocaleString('en-US', {
-        style: 'currency',
-        currency: 'USD',
-    });
+    pPrice.textContent = `$${pet.price}.00`;
 
     const pQuantity = document.createElement('p');
 
@@ -56,7 +53,17 @@ export function createPet(pet) {
 
     button.textContent = 'Add to Cart!';
 
-    li.append(pType, pName, image, pFluffy, pCategory, pPrice, pQuantity, button);
+    const remButton = document.createElement('button');
+
+    remButton.addEventListener('click', () => {
+        removeItem(pet.id);
+        pet.quantity--;
+        pQuantity.textContent = `Quantity: ${pet.quantity}`;
+    });
+
+    remButton.textContent = 'Remove Item';
+
+    li.append(pType, pName, image, pFluffy, pCategory, pPrice, pQuantity, button, remButton);
 
     return li;
 }
@@ -137,4 +144,12 @@ export function createHead() {
 
     thead.append(th1, th2, th3);
     return thead;
+}
+
+export function createBoolean(booleanString) {
+    if (booleanString === 'true') {
+        return true;
+    } else {
+        return false;
+    }
 }

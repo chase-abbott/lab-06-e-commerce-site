@@ -1,3 +1,3 @@
-import { addProductsToLocalStorage } from './products/products-local-storage.js';
+import { setProductsInLocalStorage } from './products/products-local-storage.js';
 
-addProductsToLocalStorage();
+setProductsInLocalStorage();

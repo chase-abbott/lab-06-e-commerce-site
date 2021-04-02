@@ -32,3 +32,9 @@ export function addNewProductToLocalStorage(newPetArray) {
 
     return localStorageProducts;
 }
+
+export function getProducts() {
+    let localStorageProducts = JSON.parse(localStorage.getItem(PRODUCTS));
+
+    return localStorageProducts;
+}

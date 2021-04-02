@@ -1,5 +1,5 @@
 import { getCart, setCart, addItemToCart } from '../cart-api.js';
-import { setProductsInLocalStorage, addNewProductToLocalStorage } from '../products/products-local-storage.js';
+import { setProductsInLocalStorage, addNewProductToLocalStorage, getProducts } from '../products/products-local-storage.js';
 import { array } from '../products.js';
 
 const products = array;
@@ -99,6 +99,17 @@ test('It should take a new pet and add it into the local storage product array',
     const actual = addNewProductToLocalStorage(newProduct);
 
     const expected = JSON.parse(localStorage.getItem('PRODUCT'));
+
+    expect.deepEqual(actual, expected);
+});
+
+test('It should get the value of PRODUCT from local storage and parse it', (expect) => {
+
+    setProductsInLocalStorage();
+
+    const expected = array;
+
+    const actual = getProducts();
 
     expect.deepEqual(actual, expected);
 });

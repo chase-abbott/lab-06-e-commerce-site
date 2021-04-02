@@ -27,9 +27,6 @@ export function addNewProductToLocalStorage(newPetArray) {
 
     localStorage.setItem(PRODUCTS, newPetArrayString);
 
-    localStorageProducts = localStorageProducts;
-
-
     return localStorageProducts;
 }
 

@@ -23,7 +23,7 @@ test('It should take in a cart value and put it in localStorage ', (expect) => {
 
     setCart(cart);
 
-    const expected = JSON.parse(localStorage.getItem('CART'))
+    const expected = JSON.parse(localStorage.getItem('CART'));
 
     expect.deepEqual(cart, expected);
 });
@@ -61,9 +61,9 @@ test('It should add an item into the cart ', (expect) => {
 
     ];
 
-    const actual = JSON.parse(localStorage.getItem('CART'))
+    const actual = JSON.parse(localStorage.getItem('CART'));
 
-    expect.deepEqual(actual, expected)
+    expect.deepEqual(actual, expected);
 });
 
 test('It should put the hard coded products into local storage', (expect) => {

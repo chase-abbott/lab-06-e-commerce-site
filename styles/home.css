@@ -12,7 +12,7 @@ h1 {
     font-weight: 700;
 }
 
-header > a {
+a {
     margin: 5px;
     font-size: 1.1rem;
     border-radius: 10px;
@@ -38,3 +38,4 @@ header {
     justify-content: center;
     box-shadow: none;
 }
+

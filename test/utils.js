@@ -52,7 +52,7 @@ export function createPet(pet) {
         addItemToCart(pet.id);
         pet.quantity++;
         pQuantity.textContent = `Quantity: ${pet.quantity}`;
-    })
+    });
 
     button.textContent = 'Add to Cart!';
 

@@ -31,4 +31,4 @@ button.addEventListener('click', () => {
 
     window.location = '../products';
 
-})
+});

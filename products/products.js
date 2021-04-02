@@ -23,7 +23,7 @@ form.addEventListener('submit', (e) => {
     const data = new FormData(form);
     const species = data.get('species');
     const petName = data.get('name');
-    const picture = null;
+    const picture = data.get('picture');
 
     const elFluffy = data.get('fluffy');
     const parsedFluffy = createBoolean(elFluffy);

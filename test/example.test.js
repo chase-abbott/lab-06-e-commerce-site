@@ -13,7 +13,7 @@ const test = QUnit.test;
 
 test('It should take in a pet object and return an li element', (expect) => {
 
-    const expected = `<li class="Dog" style="background: green;"><p>Dog</p><p class="name">Spot</p><img src="/assets/dog.png"><p>Fluffy</p><p>Mammal</p><p>$100.00</p><p>Quantity: undefined</p><button>Add to Cart!</button></li>`;
+    const expected = `<li class="Dog" style="background: green;"><p>Dog</p><p class="name">Spot</p><img src="/assets/dog.png"><p>Fluffy</p><p>Mammal</p><p>$100.00</p><p>Quantity: undefined</p><button>Add to Cart!</button><button>Remove Item</button></li>`;
     const actual = createPet({
         id: 'Dog',
         name: 'Spot',

@@ -1,6 +1,7 @@
 import { getCart, setCart, addItemToCart } from '../cart-api.js';
 import { setProductsInLocalStorage, addNewProductToLocalStorage, getProducts } from '../products/products-local-storage.js';
 import { array } from '../products.js';
+import { removeItem } from './utils.js';
 
 const products = array;
 
@@ -11,7 +12,7 @@ const cart = [
     },
     {
         id: 3,
-        quantity: 1
+        quantity: 2
     }
 ];
 
@@ -52,7 +53,7 @@ test('It should add an item into the cart ', (expect) => {
         },
         {
             id: 3,
-            quantity: 1
+            quantity: 2
         },
         {
             id: 20,
@@ -110,6 +111,30 @@ test('It should get the value of PRODUCT from local storage and parse it', (expe
     const expected = array;
 
     const actual = getProducts();
+
+    expect.deepEqual(actual, expected);
+});
+
+test('It should remove an item from the cart ', (expect) => {
+
+    const expected = [
+        {
+            id: 2,
+            quantity: 4
+        },
+        {
+            id: 3,
+            quantity: 1
+        }
+    ]
+
+    const stringyCart = JSON.stringify(cart);
+
+    localStorage.setItem('CART', stringyCart);
+
+    removeItem(3);
+
+    const actual = JSON.parse(localStorage.getItem('CART'));
 
     expect.deepEqual(actual, expected);
 });

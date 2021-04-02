@@ -1,3 +1,4 @@
+import { addItemToCart } from '../cart-api.js';
 
 export function createPet(pet) {
 
@@ -40,12 +41,22 @@ export function createPet(pet) {
         currency: 'USD',
     });
 
+    const pQuantity = document.createElement('p');
+
+    pQuantity.textContent = `Quantity: ${pet.quantity}`;
+
     // <button>Add to Cart</button>
     const button = document.createElement('button');
 
+    button.addEventListener('click', () => {
+        addItemToCart(pet.id);
+        pet.quantity++;
+        pQuantity.textContent = `Quantity: ${pet.quantity}`;
+    })
+
     button.textContent = 'Add to Cart!';
 
-    li.append(pType, pName, image, pFluffy, pCategory, pPrice, button);
+    li.append(pType, pName, image, pFluffy, pCategory, pPrice, pQuantity, button);
 
     return li;
 }
@@ -60,7 +71,9 @@ export function findById(array, id) {
 
 export function calcItemTotal(itemQuantity, itemPrice) {
     let total = 0;
+
     total = itemPrice * itemQuantity;
+
     return total;
 }
 
@@ -125,4 +138,3 @@ export function createHead() {
     thead.append(th1, th2, th3);
     return thead;
 }
-

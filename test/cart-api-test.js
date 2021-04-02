@@ -69,7 +69,6 @@ test('It should add an item into the cart ', (expect) => {
 test('It should put the hard coded products into local storage', (expect) => {
 
     const stringyProducts = JSON.stringify(products);
-    console.log(stringyProducts);
 
     localStorage.setItem('PRODUCTS', stringyProducts);
 

@@ -1,4 +1,4 @@
-import { addItemToCart, getCart, setCart, removeItem } from '../cart-api.js';
+import { addItemToCart, removeItem } from '../cart-api.js';
 
 export function createPet(pet) {
 
@@ -59,7 +59,7 @@ export function createPet(pet) {
         removeItem(pet.id);
         pet.quantity--;
         pQuantity.textContent = `Quantity: ${pet.quantity}`;
-    })
+    });
 
     remButton.textContent = 'Remove Item';
 

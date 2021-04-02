@@ -126,7 +126,7 @@ test('It should remove an item from the cart ', (expect) => {
             id: 3,
             quantity: 1
         }
-    ]
+    ];
 
     const stringyCart = JSON.stringify(cart);
 

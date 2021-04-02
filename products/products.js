@@ -1,7 +1,7 @@
 import { createPet } from '../test/utils.js';
 import { array } from '../products.js';
 import { createBoolean } from '../test/utils.js';
-import { setProductsInLocalStorage, addNewProductToLocalStorage, getProducts } from './products-local-storage.js';
+import { setProductsInLocalStorage, addNewProductToLocalStorage } from './products-local-storage.js';
 const form = document.querySelector('#my-form');
 
 setProductsInLocalStorage();
@@ -54,4 +54,4 @@ form.addEventListener('submit', (e) => {
     const newPet = createPet(newPetArray);
     list.append(newPet);
     form.reset();
-})
+});

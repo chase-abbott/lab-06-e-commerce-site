@@ -39,3 +39,15 @@ export function addItemToCart(productId) {
 
     setCart(cart);
 }
+
+export function removeItem(productId) {
+    const cart = getCart();
+
+    const matchingPet = findById(cart, productId);
+
+    if (matchingPet) {
+        matchingPet.quantity--;
+    }
+
+    setCart(cart);
+}

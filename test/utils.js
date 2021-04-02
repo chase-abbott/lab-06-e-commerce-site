@@ -1,4 +1,4 @@
-import { addItemToCart, getCart, setCart } from '../cart-api.js';
+import { addItemToCart, getCart, setCart, removeItem } from '../cart-api.js';
 
 export function createPet(pet) {
 
@@ -152,16 +152,4 @@ export function createBoolean(booleanString) {
     } else {
         return false;
     }
-}
-
-export function removeItem(productId) {
-    const cart = getCart();
-
-    const matchingPet = findById(cart, productId);
-
-    if (matchingPet) {
-        matchingPet.quantity--;
-    }
-
-    setCart(cart);
 }

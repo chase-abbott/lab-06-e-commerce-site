@@ -1,7 +1,7 @@
 import { getCart, setCart, addItemToCart } from '../cart-api.js';
 import { setProductsInLocalStorage, addNewProductToLocalStorage, getProducts } from '../products/products-local-storage.js';
 import { array } from '../products.js';
-import { removeItem } from './utils.js';
+import { removeItem } from '../cart-api.js';
 
 const products = array;
 

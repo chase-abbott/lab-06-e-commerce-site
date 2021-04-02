@@ -1,6 +1,8 @@
 import { getCart, setCart, addItemToCart } from '../cart-api.js';
+import { addProductsToLocalStorage } from '../products/products-local-storage.js';
+import { array } from '../products.js';
 
-
+const products = array;
 
 const cart = [
     {
@@ -59,8 +61,21 @@ test('It should add an item into the cart ', (expect) => {
 
     ];
 
-
     const actual = JSON.parse(localStorage.getItem('CART'))
 
     expect.deepEqual(actual, expected)
+});
+
+test('It should put the hard coded products into local storage', (expect) => {
+
+    const stringyProducts = JSON.stringify(products);
+    console.log(stringyProducts);
+
+    localStorage.setItem('PRODUCTS', stringyProducts);
+
+    const expected = JSON.parse(localStorage.getItem('PRODUCTS'));
+
+    const actual = addProductsToLocalStorage();
+
+    expect.deepEqual(actual, expected);
 });

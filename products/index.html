@@ -24,7 +24,7 @@
     <main>
         <h1> Come buy a Pet! </h1>
         <ul id='ul'></ul>
-        <form action="/products/index.html" method="POST"> Make Your Own Animal!
+        <form id="my-form"> Make Your Own Animal!
             <p> Species:
                 <input type="text" name="species" maxlength="20">
             </p>
@@ -38,12 +38,17 @@
                 <input type="radio" name="fluffy" value="true" checked> Yes
                 <input type="radio" name="fluffy" value="false"> No
             </p>
-            <p> Classification:
-                <input type="text" name="Classification" placeholder="ex: Mammal">
-            </p>
+            <select name="classification" id="drop-down">
+                <option value="Mammal">Mammal</option>
+                <option value="Reptile">Reptile</option>
+                <option value="Fish">Fish</option>
+                <option value="Bird">Bird</option>
+                <option value="Amphibian">Amphibian</option>
+            </select>
             <p> Price:
-                <input type="url" name="price" placeholder="20" maxlength="5">
+                <input type="number" name="price" placeholder="20" maxlength="5">
             </p>
+            <input type="submit" name="Submit" value="Submit">
         </form>
 
     </main>

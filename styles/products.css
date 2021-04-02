@@ -55,8 +55,9 @@ li {
 
 ul {
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: wrap;
     flex-direction: row;
+    max-width: 70%;
 }
 
 p {

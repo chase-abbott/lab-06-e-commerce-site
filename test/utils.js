@@ -36,10 +36,7 @@ export function createPet(pet) {
     // <p> $100 </p>
     const pPrice = document.createElement('p');
 
-    pPrice.textContent = pet.price.toLocaleString('en-US', {
-        style: 'currency',
-        currency: 'USD',
-    });
+    pPrice.textContent = `$${pet.price}.00`;
 
     const pQuantity = document.createElement('p');
 
@@ -137,4 +134,12 @@ export function createHead() {
 
     thead.append(th1, th2, th3);
     return thead;
+}
+
+export function createBoolean(booleanString) {
+    if (booleanString === 'true') {
+        return true;
+    } else {
+        return false;
+    }
 }
